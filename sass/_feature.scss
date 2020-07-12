@@ -1,0 +1,29 @@
+.features {
+  grid-column: center-start / center-end;
+  margin: 15rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  //autofit creates as many columns as the defined minmax width states
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  &__icon {
+    //svg needs fill
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / 3;
+    margin-right: 15px;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
